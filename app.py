@@ -1,7 +1,12 @@
 # app.py
 
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
 def main():
-    print("Hola desde mi aplicación de prueba en Python!")
+    return "Hola desde mi aplicación de prueba en Python!"
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True, host='0.0.0.0', port=8080)
