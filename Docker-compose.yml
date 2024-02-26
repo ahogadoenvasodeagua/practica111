@@ -1,0 +1,12 @@
+# docker-compose.yml
+
+version: "3.9"
+
+services:
+  my-python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mi-contenedor-python
+    ports:
+      - "8080:8080"
