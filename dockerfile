@@ -9,5 +9,9 @@ WORKDIR /app
 # Copia los archivos locales al directorio de trabajo del contenedor
 COPY app.py .
 
+# Instala Flask
+
+RUN pip install Flask
+
 # Ejecuta la aplicación al iniciar el contenedor
 CMD ["python", "app.py"]
