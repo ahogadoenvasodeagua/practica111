@@ -12,7 +12,7 @@ jobs:
     displayName: 'Build and Push'
     inputs:
       containerRegistry: 'miContenedorRegistry'  # Reemplaza con el nombre de tu registro de contenedores
-      repository: 'miAppService'  # Reemplaza con el nombre que desees
+      repository: 'Pruea11'  # Reemplaza con el nombre que desees
       command: 'buildAndPush'
       Dockerfile: '**/Dockerfile'
       tags: 'latest'
@@ -24,7 +24,7 @@ jobs:
   - task: AzureRmWebAppDeployment@4
     displayName: 'Azure App Service Deploy'
     inputs:
-      azureSubscription: 'miAzureSubscription'  # Reemplaza con el nombre de tu suscripción de Azure
+      azureSubscription: 'AzureforEstudens' 
       ConnectedServiceName: 'miAzureServiceConnection'  # Reemplaza con el nombre de tu conexión de servicio de Azure
       appType: 'webAppContainer'
       WebAppName: 'miAppServiceName'  # Reemplaza con el nombre de tu App Service
